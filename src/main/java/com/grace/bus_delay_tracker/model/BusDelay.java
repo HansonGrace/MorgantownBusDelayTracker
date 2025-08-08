@@ -1,4 +1,4 @@
-package model;
+package com.grace.bus_delay_tracker.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

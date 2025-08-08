@@ -1,6 +1,6 @@
-package repository;
+package com.grace.bus_delay_tracker.repository;
 
-import model.BusDelay;
+import com.grace.bus_delay_tracker.model.BusDelay;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

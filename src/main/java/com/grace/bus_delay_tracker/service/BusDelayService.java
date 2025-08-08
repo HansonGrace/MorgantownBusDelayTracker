@@ -1,6 +1,6 @@
-package service;
-import model.BusDelay;
-import repository.BusDelayRepository;
+package com.grace.bus_delay_tracker.service;
+import com.grace.bus_delay_tracker.model.BusDelay;
+import com.grace.bus_delay_tracker.repository.BusDelayRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

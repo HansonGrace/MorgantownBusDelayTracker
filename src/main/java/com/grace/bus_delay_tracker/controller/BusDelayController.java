@@ -1,7 +1,7 @@
-package controller;
+package com.grace.bus_delay_tracker.controller;
 
-import model.BusDelay;
-import service.BusDelayService;
+import com.grace.bus_delay_tracker.model.BusDelay;
+import com.grace.bus_delay_tracker.service.BusDelayService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
