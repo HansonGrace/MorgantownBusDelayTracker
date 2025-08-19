@@ -27,7 +27,7 @@ public class GTFSLoader {
 
         try {
             //open file to read
-            Reader reader = new FileReader(filePath);
+            Reader reader = new FileReader("src/main/resources/routes.txt");
 
             //alert how file is formatted, skipes first line
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT.withFirstRecordAsHeader());
