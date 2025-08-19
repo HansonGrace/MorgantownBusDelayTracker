@@ -17,6 +17,15 @@
 	<licenses>
 		<license/>
 	</licenses>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+	</repositories>
+
+
 	<developers>
 		<developer/>
 	</developers>
@@ -48,10 +57,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.opencsv</groupId>
-			<artifactId>opencsv</artifactId>
-			<version>5.7.1</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-csv</artifactId>
+			<version>1.12.0</version>
 		</dependency>
+
 
 
 		<dependency>
