@@ -1,30 +1,26 @@
 package com.grace.bus_delay_tracker.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-
 import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
 public class StopTimeId implements Serializable {
 
-    @Column(name = "trip_id")
     private String tripId;
 
-    @Column(name = "stop_sequence")
     private int stopSequence;
 
-    //default constructor
-    public StopTimeId() {
-    }
+    // Default constructor
+    public StopTimeId() {}
 
+    //constructor
     public StopTimeId(String tripId, int stopSequence) {
         this.tripId = tripId;
         this.stopSequence = stopSequence;
     }
 
-    //declare getters and setters
+    //getters and setters
     public String getTripId() {
         return tripId;
     }
@@ -41,8 +37,7 @@ public class StopTimeId implements Serializable {
         this.stopSequence = stopSequence;
     }
 
-
-    //overright = & hashcodes for composite keys
+    //hashcode and equals for proper composite key behavior
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

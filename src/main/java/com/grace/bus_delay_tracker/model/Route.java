@@ -21,7 +21,7 @@ public class Route {
     private String routeColor;
     private String routeTextColor;
     private int routeType;
-    private boolean continuousStops;
+    private int continuousStops;
 
     public Route(){}
 
@@ -90,11 +90,11 @@ public class Route {
         this.routeType = routeType;
     }
 
-    public boolean isContinuousStops() {
+    public int isContinuousStops() {
         return continuousStops;
     }
 
-    public void setContinuousStops(boolean continuousStops) {
+    public void setContinuousStops(int continuousStops) {
         this.continuousStops = continuousStops;
     }
 }

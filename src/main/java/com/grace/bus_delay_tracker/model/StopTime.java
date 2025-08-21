@@ -1,9 +1,7 @@
 package com.grace.bus_delay_tracker.model;
 
-
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "stop_times")
@@ -12,13 +10,22 @@ public class StopTime {
     @EmbeddedId
     private StopTimeId id;
 
-    private String arrivalTime;
-    private String departureTime;
-    private String stopId;
-    private int stopSequence;
-    private int timepoint;
+    @Column(name = "arrival_time")
+    private LocalTime arrivalTime;
 
-    public StopTime() {
+    @Column(name = "departure_time")
+    private LocalTime departureTime;
+
+    @Column(name = "stop_id")
+    private String stopId;
+
+    public StopTime() {}
+
+    public StopTime(StopTimeId id, LocalTime arrivalTime, LocalTime departureTime, String stopId) {
+        this.id = id;
+        this.arrivalTime = arrivalTime;
+        this.departureTime = departureTime;
+        this.stopId = stopId;
     }
 
     public StopTimeId getId() {
@@ -29,19 +36,19 @@ public class StopTime {
         this.id = id;
     }
 
-    public String getArrivalTime() {
+    public LocalTime getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(String arrivalTime) {
+    public void setArrivalTime(LocalTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 
-    public String getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureTime(LocalTime departureTime) {
         this.departureTime = departureTime;
     }
 
@@ -52,21 +59,4 @@ public class StopTime {
     public void setStopId(String stopId) {
         this.stopId = stopId;
     }
-
-    public int getStopSequence() {
-        return stopSequence;
-    }
-
-    public void setStopSequence(int stopSequence) {
-        this.stopSequence = stopSequence;
-    }
-
-    public int getTimepoint() {
-        return timepoint;
-    }
-
-    public void setTimepoint(int timepoint) {
-        this.timepoint = timepoint;
-    }
-
 }
