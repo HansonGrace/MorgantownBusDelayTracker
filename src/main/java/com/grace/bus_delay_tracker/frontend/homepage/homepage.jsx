@@ -15,5 +15,23 @@ function Home() {
     *
     * Maybe a map of motown as the main image, or the mountainline bus, remember to make it dark
     * Green and white theme idea
+    * Maybe a small gif animation of a bus moving across the screen? Will have to find video or gif tho :()
     *  */
+
+    //states to manage visibility of elements and user login status
+        const [showElement, setShowElement] = useState(true);
+        const [userLoggedIn, setUserLoggedIn] = useState(false);
+
+        //useEffect to check local storage for authentication status, might need to change?
+        const checkLocalStorage = () => {
+        const myVar = localStorage.getItem('authenticated');
+        setShowElement(myVar !== 'true');
+    };
+
+      useEffect(() => {
+        checkLocalStorage();
+    }, []);
+
+     // return ()
+
 }
