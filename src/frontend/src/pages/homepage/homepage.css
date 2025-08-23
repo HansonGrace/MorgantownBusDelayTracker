@@ -1,13 +1,21 @@
 /* Page container */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .home {
-height: 100vh;
-    width:100vw;     
-background-image: url('https://wvtourism.com/wp-content/uploads/2015/06/Mountain-Line-Bus-Header-Image-e1576606554604.jpg');
- background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;    
+  background-position: center;
+  background-repeat: repeat-y;
+  display: flex;             
+  flex-direction: column;
+  overflow: hidden;
+  background:    linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 15%, transparent 30%), url('https://enews.wvu.edu/files/ecf90f3e-5f95-496e-b4a1-243a86f430e0/1200x?cb=91afb69cffd0d41227132e4836e592ac');
 }
 
 /* Navbar */

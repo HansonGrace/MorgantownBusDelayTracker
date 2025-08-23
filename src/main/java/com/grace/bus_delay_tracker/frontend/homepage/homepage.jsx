@@ -15,7 +15,7 @@ function Home() {
     *
     * Maybe a map of motown as the main image, or the mountainline bus, remember to make it dark
     * Green and white theme idea
-    * Maybe a small gif animation of a bus moving across the screen? Will have to find video or gif tho :()
+    * Maybe a small gif animation of a bus moving across the screen? Will have to find video or gif tho :(
     *  */
 
     //states to manage visibility of elements and user login status
