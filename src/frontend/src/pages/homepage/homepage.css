@@ -1,0 +1,49 @@
+/* Page container */
+.home {
+height: 100vh;
+    width:100vw;     
+background-image: url('https://wvtourism.com/wp-content/uploads/2015/06/Mountain-Line-Bus-Header-Image-e1576606554604.jpg');
+ background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end; 
+  padding: 1.5rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.welcome {
+  flex: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+}
