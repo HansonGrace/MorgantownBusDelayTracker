@@ -9,6 +9,8 @@
     * green wv state logo in middle
     *  below OR above it, show title "Morgantown Bus Delays", with a small description under it
     *
+    * https://www.google.com/url?sa=i&url=https%3A%2F%2Fwvtourism.com%2Fcompany%2Fmountain-line-bus-service%2F&psig=AOvVaw0vXvvPmoFedU3pNGeXyYdu&ust=1756001587926000&source=images&cd=vfe&opi=89978449&ved=0CBYQjRxqFwoTCJj7peztn48DFQAAAAAdAAAAABAE
+    * 
     * Maybe a map of motown as the main image, or the mountainline bus, remember to make it dark
     * Green and white theme idea
     * Maybe a small gif animation of a bus moving across the screen? Will have to find video or gif tho :()
@@ -29,8 +31,8 @@ function Home() {
         </ul>
       </nav>
 
-      <div className="welcome">
-        <h1>Welcome!</h1>
+      <div className="busdelayshome">
+        <h1>Morgantown Bus Delays</h1>
       </div>
     </div>
   );

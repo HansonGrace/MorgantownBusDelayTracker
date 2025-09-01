@@ -5,19 +5,27 @@ html, body {
   height: 100%;
   width: 100%;
 }
+.title-container h1 {
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  margin: 0 0 1rem 0;  
+}
 
 .home {
   min-height: 100vh;
   width: 100%;
-  background-size: cover;    
-  background-position: center;
-  background-repeat: repeat-y;
   display: flex;             
   flex-direction: column;
   overflow: hidden;
-  background:    linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 15%, transparent 30%), url('https://enews.wvu.edu/files/ecf90f3e-5f95-496e-b4a1-243a86f430e0/1200x?cb=91afb69cffd0d41227132e4836e592ac');
-}
 
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 15%, transparent 35%),
+              url('https://enews.wvu.edu/files/ecf90f3e-5f95-496e-b4a1-243a86f430e0/1200x?cb=91afb69cffd0d41227132e4836e592ac');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Navbar */
 .navbar {
   display: flex;
@@ -43,15 +51,30 @@ html, body {
   text-decoration: underline;
 }
 
-.welcome {
+.busdelayshome {
   flex: 1; 
   display: flex;
-  align-items: center;
+  position: relative;
+  top: -50px;
   justify-content: center;
 }
 
-.welcome h1 {
-  font-size: 3rem;
+.busdelayshome h1 {
+  font-size: 4rem;
   color: white;
   font-weight: bold;
+  font: 'Apple SD Gothic Neo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  text-align: center;
+}
+
+
+.title-logo {
+  width: 500px;  
+  height: auto;
 }
