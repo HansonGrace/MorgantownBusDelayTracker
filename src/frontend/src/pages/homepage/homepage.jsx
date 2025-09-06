@@ -25,7 +25,7 @@ function Home() {
    
       <nav className="navbar">
         <ul>
-          <li><a href="/login">Login</a></li>
+          <li><a href="/submit">Submit a Delay</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/delays">View Delays</a></li>
         </ul>
@@ -33,6 +33,11 @@ function Home() {
 
       <div className="busdelayshome">
         <h1>Morgantown Bus Delays</h1>
+      </div>
+
+      <div className="map">
+        <h3>Open the sidebar on the top left corner of the map to view different MLTA routes.</h3>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1BwcbWin078YjBZt_oJOwIft6eFsJrwwn&ehbc=2E312F" width="1050" height="400"></iframe>
       </div>
     </div>
   );
