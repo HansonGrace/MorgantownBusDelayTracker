@@ -18,14 +18,31 @@ html, body {
   display: flex;             
   flex-direction: column;
   overflow-x: hidden;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 6%, transparent 10%);
-  background-color: #113008;
+  position: relative;
+  background: none;
+}
+
+.home::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../images/mountainlinebackdrop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.4);
+  z-index: -1;
 }
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: flex-end; 
-  padding: 1.5rem;
+  padding: 1.0rem;
+  margin-top:-8px;
 }
 
 .navbar ul {
@@ -51,6 +68,8 @@ html, body {
   display: flex;
   position: relative;
   justify-content: center;
+  margin-top: -50px;
+  margin-bottom: 20px;
 }
 
 .busdelayshome h1 {
@@ -67,11 +86,18 @@ html, body {
   font: 'Apple SD Gothic Neo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.map iframe {
+  width: 1000px;
+  height: 415px;  
+}
+
 .title-container, .map {
   display: flex;
   flex-direction: column;   
   align-items: center;
   text-align: center;
+ 
+   margin-top: -60px;
 }
 
 
