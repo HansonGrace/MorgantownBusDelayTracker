@@ -7,7 +7,7 @@ function Submit() {
 
             <nav className="navebar">
                 <ul>
-                    <li><a href="/homepage">Homepage</a></li>
+                    <li><a href="/">Homepage</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/view">View Delays</a></li>
                 </ul>
@@ -21,3 +21,5 @@ function Submit() {
         </div>
     );
 }
+
+export default Submit;
