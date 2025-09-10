@@ -83,3 +83,35 @@ html, body {
     margin-top: -75px;
 }
 
+.form-container {
+
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: -50px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.form-group select {
+  width: 300px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group select:focus {
+  border-color: #007108;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
+}

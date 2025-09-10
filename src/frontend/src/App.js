@@ -11,6 +11,7 @@ function App() {
 
     //initialize authenticated state from local storage
      const [authenticated, setAuthenticated] = useState(
+      //9-10-2025 might not need this due to no login system anymore. will see -grace
     () => JSON.parse(localStorage.getItem('authenticated')) || false
   );
 

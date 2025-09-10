@@ -6,6 +6,21 @@ function Submit() {
 
     //clock
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [selectedRoute, setSelectedRoute] = useState('');
+
+    const busRoutes = [
+        "Blue Line",
+        "Red Line",
+        "Gold Line",
+        "Green Line",
+        "Purple Line",
+        "Campus PM",
+        "Mountain Heights",
+        "Valley View",
+        "West Run",
+        "Cassville Direct"
+    ];
+
 
         useEffect(() => {
             const timer = setInterval(() => setCurrentTime(new Date()), 1000);
@@ -14,6 +29,10 @@ function Submit() {
             clearInterval(timer);
         };
     }, []);
+
+    const handleRouteChange = (event) => {
+        setSelectedRoute(event.target.value);
+    }
 
     return (
         <div className="submit">
@@ -33,7 +52,26 @@ function Submit() {
             <div className="clock">
                 <p>{currentTime.toLocaleTimeString()}</p>
             </div>
-
+            <div className="form-container">
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="route">Select Bus Route:</label>
+                        <select
+                            id="route"
+                            value={selectedRoute}
+                            onChange={handleRouteChange}
+                            required
+                        >
+                            <option value="">-- Select a route --</option>
+                            {busRoutes.map((route, index) => (
+                                <option key={index} value={route}>
+                                    {route}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }
