@@ -5,7 +5,7 @@ function Submit() {
     return (
         <div className="submit">
 
-            <nav className="navebar">
+            <nav className="navbar">
                 <ul>
                     <li><a href="/">Homepage</a></li>
                     <li><a href="/about">About</a></li>

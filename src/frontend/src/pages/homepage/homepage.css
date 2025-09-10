@@ -43,6 +43,7 @@ html, body {
   justify-content: flex-end; 
   padding: 1.0rem;
   margin-top:-8px;
+  z-index: 1;
 }
 
 .navbar ul {
