@@ -37,7 +37,7 @@ function Home() {
 
       <div className="map">
         <h3>Open the sidebar on the top left corner of the map to view different MLTA routes.</h3>
-        <iframe src="https://www.google.com/maps/d/embed?mid=1BwcbWin078YjBZt_oJOwIft6eFsJrwwn&ehbc=2E312F" width="1050" height="400"></iframe>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1BwcbWin078YjBZt_oJOwIft6eFsJrwwn&ehbc=2E312F"></iframe>
       </div>
     </div>
   );

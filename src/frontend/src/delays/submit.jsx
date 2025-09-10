@@ -4,10 +4,10 @@ import './submit.css';
 
 function Submit() {
 
-    //clock
     const [currentTime, setCurrentTime] = useState(new Date());
     const [selectedRoute, setSelectedRoute] = useState('');
 
+    //all mlta bus routes for drop down
     const busRoutes = [
         "Blue Line",
         "Red Line",
@@ -21,9 +21,9 @@ function Submit() {
         "Cassville Direct"
     ];
 
-
-        useEffect(() => {
-            const timer = setInterval(() => setCurrentTime(new Date()), 1000);
+    //clock
+    useEffect(() => {
+        const timer = setInterval(() => setCurrentTime(new Date()), 1000);
 
         return () => {
             clearInterval(timer);
@@ -71,6 +71,10 @@ function Submit() {
                         </select>
                     </div>
                 </form>
+            </div>
+
+            <div className='button'>
+                
             </div>
         </div>
     );

@@ -75,8 +75,8 @@ html, body {
 }
 
 .map iframe {
-  width: 1000px;
-  height: 415px;  
+  width: 65rem;
+  height: 30rem;  
 }
 
 .map {

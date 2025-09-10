@@ -98,13 +98,13 @@ html, body {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .form-group select {
-  width: 300px;
+  width: 25rem;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border: 2px solid #ccc;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.8);
