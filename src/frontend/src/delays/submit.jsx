@@ -2,6 +2,14 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import './submit.css';
 
+
+/**
+ * to do: 
+ * submit button on click will add the delay of the line and the time it was submitted
+ * to the database
+ * an alert will pop up that a delay has been submitted
+ */
+
 function Submit() {
 
     const [currentTime, setCurrentTime] = useState(new Date());
