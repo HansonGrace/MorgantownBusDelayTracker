@@ -60,7 +60,7 @@ html, body {
   text-decoration: underline;
 }
 
-.about {
+.title {
   display: flex;
   position: relative;
   justify-content: center;
@@ -68,8 +68,25 @@ html, body {
   margin-bottom: 20px;
 }
 
-.about h1 {
+.title h1 {
   font-size: 4rem;
   top: -10px;
+}
+
+.about-container {
+  position: relative; /* Ensure it stays above the background */
+  background-color: rgba(110, 110, 110, 0.6);
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  text-align: center;
+  z-index: 1; /* Layer above the background */
+}
+
+.about-container p {
+  font-size: 1.5rem;
+  
 }
 
