@@ -34,7 +34,7 @@ html, body {
   z-index: -1;
 }
 
-/* Navbar */
+
 .navbar {
   display: flex;
   justify-content: flex-end; 
@@ -116,6 +116,31 @@ html, body {
   box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
 }
 
+.form-group textarea {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+}
+
+.form-group textarea:focus {
+  border-color: #007108;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
+}
+
+.word-count {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
 .loading {
   width: 25rem;
   padding: 0.5rem;
@@ -138,15 +163,18 @@ html, body {
   border-radius: 4px;
 } 
 
-.button button {
+.button {
   display: flex;
-  position: relative;
   justify-content: center;
+  /* this might be a bad idea but i cant get it to go up any higher :( -grace*/
+  margin-top: 0.000000001rem;
+  margin-bottom: 1rem;
+}
+
+.button button {
   width: 15rem;
   height: 1.8rem;
   padding: 5px;
-  margin-top: 1rem;
-  margin-left: 40rem;
   text-align: center;
   text-decoration: none;
   font-size: 1rem;

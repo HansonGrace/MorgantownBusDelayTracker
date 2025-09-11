@@ -14,6 +14,7 @@ function Submit() {
 
     const [currentTime, setCurrentTime] = useState(new Date());
     const [selectedRoute, setSelectedRoute] = useState('');
+    const [delayDescription, setDelayDescription] = useState('');
 
     // All MLTA bus routes from backend data
     const routes = [
@@ -56,6 +57,20 @@ function Submit() {
         setSelectedRoute(event.target.value);
     }
 
+    const handleDescriptionChange = (event) => {
+        const text = event.target.value;
+        //limit to 50 words
+        const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+        if (words.length <= 50) {
+            setDelayDescription(text);
+        }
+    }
+
+    const getWordCount = () => {
+        const words = delayDescription.trim().split(/\s+/).filter(word => word.length > 0);
+        return words.length;
+    }
+
     return (
         <div className="submit">
 
@@ -87,7 +102,23 @@ function Submit() {
                                     {route.routeShortName} - {route.routeLongName}
                                 </option>
                             ))}
+                            <option value="other">Other</option>
                         </select>
+                    </div>
+                    
+                    <div className="form-group">
+                        <label htmlFor="description">Describe Delay:</label>
+                        <textarea
+                            id="description"
+                            value={delayDescription}
+                            onChange={handleDescriptionChange}
+                            placeholder="Describe the delay (up to 50 words)..."
+                            rows="3"
+                            maxLength="500"
+                        />
+                        <div className="word-count">
+                            {getWordCount()}/50 words
+                        </div>
                     </div>
                 </form>
             </div>
