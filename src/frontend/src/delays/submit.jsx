@@ -48,10 +48,7 @@ function Submit() {
             <div className="submitDelay">
                 <h1>Submit a Delay</h1>
             </div>
-
-            <div className="clock">
-                <p>{currentTime.toLocaleTimeString()}</p>
-            </div>
+        
             <div className="form-container">
                 <form>
                     <div className="form-group">
@@ -74,7 +71,7 @@ function Submit() {
             </div>
 
             <div className='button'>
-                
+                <button>Submit Delay at {currentTime.toLocaleTimeString()}</button>
             </div>
         </div>
     );
