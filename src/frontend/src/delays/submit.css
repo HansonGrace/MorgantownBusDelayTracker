@@ -114,6 +114,28 @@ html, body {
   border-color: #007108;
   outline: none;
   box-shadow: 0 0 5px rgba(0, 113, 8, 0.5);
+}
+
+.loading {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #007108;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #007108;
+  border-radius: 4px;
+}
+
+.error {
+  width: 25rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #d2232a;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid #d2232a;
+  border-radius: 4px;
 } 
 
 .button button {

@@ -15,18 +15,32 @@ function Submit() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [selectedRoute, setSelectedRoute] = useState('');
 
-    //all mlta bus routes for drop down
-    const busRoutes = [
-        "Blue Line",
-        "Red Line",
-        "Gold Line",
-        "Green Line",
-        "Purple Line",
-        "Campus PM",
-        "Mountain Heights",
-        "Valley View",
-        "West Run",
-        "Cassville Direct"
+    // All MLTA bus routes from backend data
+    const routes = [
+        { routeId: "46387", routeShortName: "RT 1", routeLongName: "Campus PM" },
+        { routeId: "46388", routeShortName: "RT 2", routeLongName: "Downtown Mall PM" },
+        { routeId: "45954", routeShortName: "RT 3", routeLongName: "Green Line" },
+        { routeId: "46421", routeShortName: "RT 6", routeLongName: "Gold Line" },
+        { routeId: "46422", routeShortName: "RT 7", routeLongName: "Red Line" },
+        { routeId: "46423", routeShortName: "RT 8", routeLongName: "Brookhaven" },
+        { routeId: "46424", routeShortName: "RT 9", routeLongName: "Purple Line" },
+        { routeId: "46425", routeShortName: "RT 11", routeLongName: "Cassville" },
+        { routeId: "46426", routeShortName: "RT 12", routeLongName: "Blue Line" },
+        { routeId: "46427", routeShortName: "RT 13", routeLongName: "Crown" },
+        { routeId: "46428", routeShortName: "RT 14", routeLongName: "Mt. Heights" },
+        { routeId: "46429", routeShortName: "RT 15", routeLongName: "Grafton Rd" },
+        { routeId: "46430", routeShortName: "RT 16", routeLongName: "Pink Line" },
+        { routeId: "46420", routeShortName: "RT 4", routeLongName: "Orange Line" },
+        { routeId: "46432", routeShortName: "RT 30", routeLongName: "West Run" },
+        { routeId: "46433", routeShortName: "RT 38", routeLongName: "Blue & Gold Express" },
+        { routeId: "46434", routeShortName: "RT 39", routeLongName: "Beechurst Express" },
+        { routeId: "46435", routeShortName: "RT 44", routeLongName: "Valley View" },
+        { routeId: "46436", routeShortName: "RT 46", routeLongName: "Eastern Circulator" },
+        { routeId: "46437", routeShortName: "RT 47", routeLongName: "Northern Circulator" },
+        { routeId: "46438", routeShortName: "RT 50", routeLongName: "Don Knotts" },
+        { routeId: "46439", routeShortName: "RT 51", routeLongName: "Westridge Mylan" },
+        { routeId: "46440", routeShortName: "RT 52", routeLongName: "Wadestown" },
+        { routeId: "46431", routeShortName: "RT 29", routeLongName: "Grey Line" }
     ];
 
     //clock
@@ -68,9 +82,9 @@ function Submit() {
                             required
                         >
                             <option value="">-- Select a route --</option>
-                            {busRoutes.map((route, index) => (
-                                <option key={index} value={route}>
-                                    {route}
+                            {routes.map((route) => (
+                                <option key={route.routeId} value={route.routeId}>
+                                    {route.routeShortName} - {route.routeLongName}
                                 </option>
                             ))}
                         </select>
