@@ -184,8 +184,29 @@ html, body {
   transform: scale(1.3);
 }
 
-.button button:hover {
+.button button:hover:not(:disabled) {
   background-color: rgba(0, 113, 8, 0.5);
   color: whitesmoke;
+}
+
+.button button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-message {
+  text-align: center;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 600px;
+}
+
+.status-message.success {
+  color: #28a745;
+}
+
+.status-message.error {
+  color: #dc3545;
 } 
 

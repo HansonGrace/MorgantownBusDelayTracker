@@ -68,6 +68,14 @@ html, body {
   margin-bottom: 20px;
 }
 
+.viewDelay {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: -50px;
+  margin-bottom: 20px;
+}
+
 .viewDelay h1 {
   font-size: 4rem;
   top: -10px;
@@ -79,4 +87,85 @@ html, body {
     position: relative;
     margin-left: 50px;
     margin-top: -75px;
+}
+
+.delays-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.delays-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.delay-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.delay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.delay-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007108;
+}
+
+.delay-time {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.delay-description {
+    margin-top: 0.5rem;
+}
+
+.delay-description p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #555;
+}
+
+.loading, .error, .no-delays {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    color: #333;
+}
+
+.error {
+    color: #d2232a;
+}
+
+.no-delays {
+    color: #666;
+}
+
+.more-delays-info {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }

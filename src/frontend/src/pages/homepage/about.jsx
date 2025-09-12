@@ -23,7 +23,7 @@ function About() {
                     known delays. This way, users of the MLTA can stay up to date on the progress of all the lines so they are 
                     not out of the loop.
                 </p>
-                <p>This website was created by Grace Hanson with frontend assistant Lauren Taylor.</p>
+                <p>Website created by Grace Hanson and Lauren Taylor</p>
             </div>
 
         </div>

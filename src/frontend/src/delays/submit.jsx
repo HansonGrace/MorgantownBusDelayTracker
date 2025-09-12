@@ -15,6 +15,8 @@ function Submit() {
     const [currentTime, setCurrentTime] = useState(new Date());
     const [selectedRoute, setSelectedRoute] = useState('');
     const [delayDescription, setDelayDescription] = useState('');
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // All MLTA bus routes from backend data
     const routes = [
@@ -71,6 +73,72 @@ function Submit() {
         return words.length;
     }
 
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        
+        if (!selectedRoute) {
+            setSubmitStatus('error');
+            return;
+        }
+
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            //find the route name for the selected route ID
+            const selectedRouteData = routes.find(route => route.routeId === selectedRoute);
+            const routeName = selectedRouteData ? 
+                `${selectedRouteData.routeShortName} - ${selectedRouteData.routeLongName}` : 
+                'Other';
+
+            const delayData = {
+                routeId: selectedRoute,
+                routeName: routeName,
+                description: delayDescription || null
+            };
+
+            console.log('Submitting delay data:', delayData);
+            
+            const response = await fetch('http://localhost:8080/api/delays', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(delayData)
+            });
+
+            console.log('Submit response status:', response.status);
+            console.log('Submit response headers:', response.headers);
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Delay submitted successfully:', result);
+                setSubmitStatus('success');
+            
+                setSelectedRoute('');
+                setDelayDescription('');
+                //clear  message after 3 seconds
+                setTimeout(() => setSubmitStatus(null), 3000);
+            } else {
+                const errorText = await response.text();
+                console.error('Submit failed. Status:', response.status, 'Error text:', errorText);
+                throw new Error(`HTTP ${response.status}: ${errorText || 'Failed to submit delay'}`);
+            }
+        } catch (error) {
+            console.error('Detailed error submitting delay:', {
+                message: error.message,
+                stack: error.stack,
+                name: error.name
+            });
+            setSubmitStatus('error');
+            //clear  message after 5 seconds
+            //to add: better error handling-  grace
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } finally {
+            setIsSubmitting(false);
+        }
+    }
+
     return (
         <div className="submit">
 
@@ -85,9 +153,21 @@ function Submit() {
             <div className="submitDelay">
                 <h1>Submit a Delay</h1>
             </div>
+            
+            {submitStatus === 'success' && (
+                <div className="status-message success">
+                    Successfully Submitted
+                </div>
+            )}
+            
+            {submitStatus === 'error' && (
+                <div className="status-message error">
+                    Error. Please Try Again
+                </div>
+            )}
         
             <div className="form-container">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="route">Select Bus Route:</label>
                         <select
@@ -120,11 +200,13 @@ function Submit() {
                             {getWordCount()}/50 words
                         </div>
                     </div>
+                    
+                    <div className='button'>
+                        <button type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? 'Submitting...' : `Submit Delay at ${currentTime.toLocaleTimeString()}`}
+                        </button>
+                    </div>
                 </form>
-            </div>
-
-            <div className='button'>
-                <button>Submit Delay at {currentTime.toLocaleTimeString()}</button>
             </div>
         </div>
     );
